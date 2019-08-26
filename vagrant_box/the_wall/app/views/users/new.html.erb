@@ -1,0 +1,16 @@
+<div class="container">
+    <% if flash[:notice] %>
+        <% flash[:notice].each do |note| %>
+        <p id="notice"><%= note %></p>
+        <% end %>
+    <% end %>
+    <h1>Sign In</h1>
+
+    <form class="form-group" action="/users" method="post">
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+        <label class='' for="name"></label>
+        <input class='form-control' type="text" name="user[name]" placeholder="Username">
+        <button type="submit" class="btn btn-info">Sign In</button>
+    </form>
+</div>

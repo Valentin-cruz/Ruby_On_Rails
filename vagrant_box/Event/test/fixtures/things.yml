@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  edate: 2019-08-22
+  ecity: MyString
+  estate: MyString
+  user: one
+
+two:
+  name: MyString
+  edate: 2019-08-22
+  ecity: MyString
+  estate: MyString
+  user: two

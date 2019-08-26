@@ -1,0 +1,32 @@
+<div class="container">
+    <h2><%= @student.dojo.branch %>'s <%= @student.first_name %> <%= @student.last_name %></h2>
+    <p>E-mail: <%= @student.email %></p>
+
+    <a href="/dojos/<%= @student.dojo.id %>">Students Home</a> | <a href="/dojos/<%= @student.dojo.id %>/students/<%= @student.id %>/edit">Edit</a>
+
+    <h3>Cohort</h3>
+    <table>
+        <tbody>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+        </tr>
+
+        <% @cohordmates.each do |cohordmate| %>
+        <tr>
+            <td><%= cohordmate.first_name %></td>
+            <td><%= cohordmate.last_name %></td>
+            <td><%= cohordmate.email %></td>
+        </tr>
+        <% end %>
+
+        </tbody>
+    </table>
+
+    <div class="errors">
+        <% if flash[:success] %>
+        <p><%= flash[:success] %></p>
+        <% end %>
+    </div>
+</div>
